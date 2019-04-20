@@ -1,0 +1,5 @@
+*.meta
+
+_Scenes/
+StreamingAssets/
+TextMesh Pro/
