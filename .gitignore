@@ -1,0 +1,6 @@
+*.meta
+*mixer
+
+TextMesh Pro/
+StreamingAssets/
+_Scenes/
