@@ -1,6 +1,15 @@
-*.meta
-*mixer
+# Ignore everything
 
-TextMesh Pro/
-StreamingAssets/
-_Scenes/
+*
+
+# Commit .asmdef files
+
+!Scripts/*.asmdef
+!Editor/*.asmdef
+
+# Commit C# source code
+
+!Scripts/*.cs
+!Editor/*.cs
+!Editor/IntegrationTests/*.cs
+!Editor/Tests/*.cs
