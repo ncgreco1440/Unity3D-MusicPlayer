@@ -73,5 +73,29 @@ namespace IcedCoffee
                 onComplete();
             }
         }
+
+        /**
+         * <summary>
+         * Returns the name of all files found with the soundtrack directory.
+         * </summary>
+         */
+        public List<string> LoadAudioFileNames()
+        {
+            List<System.IO.FileInfo> fileList = new List<System.IO.FileInfo>();
+            string[] fileNames = System.IO.Directory.GetFiles(this._path, "*.ogg", System.IO.SearchOption.TopDirectoryOnly);
+            List<string> files = new List<string>();
+
+            foreach (string fileName in fileNames)
+            {
+                fileList.Add(new System.IO.FileInfo(fileName));
+            }
+
+            fileList.ForEach((System.IO.FileInfo f) =>
+            {
+                files.Add(f.Name.Replace(".ogg", ""));
+            });
+
+            return files;
+        }
     }
 }
